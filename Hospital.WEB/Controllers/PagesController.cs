@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,14 @@ namespace Hospital.WEB.Controllers
     
     public class PagesController : ControllerBase
     {
+        private readonly ILogger<PagesController> _log;
+
+        public PagesController(ILogger<PagesController> logger)
+        {
+            _log = logger;
+            _log.LogDebug("debug log test");
+        }
+
         [HttpGet("/")]
         public IActionResult Index()
         {

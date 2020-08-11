@@ -1,4 +1,7 @@
+using Hospital.Common;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +12,14 @@ namespace Hospital.WEB.Controllers
     [Route("dev")]
     public class DevController : ControllerBase
     {
+        private readonly ILogger<DevController> _log;
+
+        public DevController(ILogger<DevController> logger, IOptions<HospitalOptions> settings)
+        {
+            _log = logger;
+            _log.LogDebug("this is test : {0}", settings.Value.HospitalConnectionString);
+        }
+
         [HttpGet]
         public IActionResult Info()
         {

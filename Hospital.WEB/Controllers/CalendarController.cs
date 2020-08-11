@@ -9,6 +9,7 @@ namespace Hospital.WEB.Controllers
     [Route("calendar")]
     public class CalendarController : ControllerBase
     {
+
         [HttpGet()]
         public IActionResult Index()
         {

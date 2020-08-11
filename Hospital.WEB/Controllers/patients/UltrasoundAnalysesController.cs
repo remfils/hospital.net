@@ -44,12 +44,5 @@ namespace Hospital.WEB.Controllers.patients
             throw new Exception();
         }
 
-        [HttpPost("{id}/ultrasound_create")]
-        public IActionResult CreateUltrasound([FromQuery] int id)
-        {
-            // TODO: implement CreateUltrasound
-            throw new Exception();
-        }
-
     }
 }

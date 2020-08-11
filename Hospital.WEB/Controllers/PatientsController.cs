@@ -16,7 +16,7 @@ namespace Hospital.WEB.Controllers
             throw new Exception();
         }
 
-        [HttpGet("/")]
+        [HttpGet("")]
         public IActionResult GetList()
         {
             // TODO: implement GetList
@@ -122,7 +122,7 @@ namespace Hospital.WEB.Controllers
         }
 
         [HttpGet("new")]
-        public IActionResult Create()
+        public IActionResult New()
         {
             // TODO: implement Create
             throw new Exception();

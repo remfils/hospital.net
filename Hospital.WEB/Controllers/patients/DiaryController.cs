@@ -31,7 +31,7 @@ namespace Hospital.WEB.Controllers.patients
         }
 
         [HttpGet("{id}/new_checkup_log")]
-        public IActionResult CreateCheckupLog([FromQuery]int id)
+        public IActionResult NewCheckupLog([FromQuery]int id)
         {
             // TODO: implement CreateCheckupLog
             throw new Exception();
